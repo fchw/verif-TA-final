@@ -1,0 +1,33 @@
+{
+  "name": "pdf_verify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ninja-labs/verify-pdf": "^0.3.9",
+    "base64-js": "^1.5.1",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.7",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.3.1",
+    "ieee754": "^1.2.1",
+    "multer": "^1.4.4",
+    "node-forge": "^1.3.0",
+    "node-signpdf": "^1.4.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-plugin-module-resolver": "^4.1.0"
+  }
+}
