@@ -138,4 +138,4 @@ function main() {
   const { getCertificatesInfoFromPDF } = pkg;
   const certs = getCertificatesInfoFromPDF(signedPdfBuffer);
 }
-main();
+// main();

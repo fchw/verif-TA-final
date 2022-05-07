@@ -7,19 +7,24 @@
     <title>Verify PDF</title>
 </head>
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mochiy+Pop+P+One&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
     .logo{
-        font-family: 'Lobster', cursive;
-        font-family: 'Mochiy Pop P One', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
+
 </style>
 <body class="flex flex-col h-full">
-    <nav class="flex-1 w-100 py-3 px-10 bg-emerald-600">
-        <a href="/" class="font-bold text-gray-50 logo text-lg">Verify PDF</a>
+    <nav class="flex flex-row items-center w-100 py-3 px-10 bg-gray-800">
+        <img src="./public/image/itb.png" 
+        width="50" 
+        height="50"
+        class="mr-4"/>
+        
+        <a href="/" class="font-bold text-gray-50 logo text-lg">Verifikasi PDF</a> 
     </nav>
     <main class="grow-1 px-[10%] min-h-[85%] py-10 justify-center flex items-stretch">
         <div class="w-[60%] justify-self-center ">
-            <h3 class="text-upper text-2xl text-cyan-900 font-bold text-center mb-3" >Verify PDF Certification</h3>
+            <h3 class="text-upper text-2xl text-cyan-900 font-bold text-center mb-3" >Verifikasi Tanda Tangan Digital Pada Dokumen PDF</h3>
             <form action="/result" method="post" enctype="multipart/form-data">
                 <!-- <input type="file" name="file" name="file"> -->
                 <div class="m-4">
@@ -36,12 +41,12 @@
                                 <p class="pt-1 text-sm tracking-wider text-gray-400 group-hover:text-gray-600">
                                     Attach a file</p>
                             </div>
-                            <input type="file" class="opacity-0" name="file" id="file" />
+                            <input type="file" class="opacity-0" name="file" id="file" accept="application/pdf" />
                         </label>
                     </div>
                 </div>
                 <button type="button" id="previewButton" class="w-full bg-gray-50 border-2 border-cyan-800 text-cyan-800 px-5 py-3 rounded-md font-bold text-lg hidden mb-5" onclick="previewFile()">Preview File</button>
-                <button type="submit" class="w-full bg-cyan-800 text-gray-50 px-5 py-3 rounded-md font-bold text-lg">Verify</button>
+                <button type="submit" id="submitButton" class="w-full bg-cyan-800 text-gray-50 px-5 py-3 rounded-md font-bold text-lg hidden">Verify</button>
             </form>
         </div>
     </main>
@@ -72,6 +77,13 @@
         else
         button.classList.add('hidden')
         preview.src= URL.createObjectURL(e.target.files[0])
+
+        const submitbutton = document.getElementById('submitButton')
+        if(e.target.files[0])
+        submitbutton.classList.remove('hidden')
+        else
+        submitbutton.classList.add('hidden')
+
     }
 
     const previewFile = () => {

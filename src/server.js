@@ -13,6 +13,8 @@ app.use(fileUpload());
 app.use(express.json())
 app.use(express.urlencoded());
 app.set('view engine', 'ejs');
+app.use( express.static( "public" ) );
+app.use( express.static( "views" ) );
 
 app.get("/", (req,res) => {
     res.render("index.ejs")
