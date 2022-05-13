@@ -16,8 +16,8 @@ export class VerifyPdf {
       const  byteRangeArr = byteRangeNumbers[0].split(" ");
     } catch(err) {
       const redText = "\x1b[31m%s\x1b[0m";
-      console.log(redText, "Signature not found or document has been tempered");
-      return {status : false, msg : "Signature not found or document has been tempered"};
+      console.log(redText, "Signature not found or document has been tampered");
+      return {status : false, msg : "Signature not found or document has been tampered"};
     }
     const byteRangeArr = byteRangeNumbers[0].split(" ");
 

@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors"
 import fileUpload from "express-fileupload";
-import fs from "fs";
 import pkg from '@ninja-labs/verify-pdf';  // ES6 
 import { VerifyPdf } from "./index.js";
 
