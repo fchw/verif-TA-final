@@ -1,7 +1,7 @@
-##Install packages
-npm -i
+## Install packages
+npm install
 
-## start server
+## Start Server
 1. run command
 ```sh
 node src/server.js
